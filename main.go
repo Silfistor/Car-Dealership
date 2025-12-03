@@ -222,6 +222,6 @@ func main() {
 	http.HandleFunc("/", homeHandler)
 	http.HandleFunc("/search", searchHandler)
 
-	log.Println("🚀 Сервер запущен на http://localhost:8080")
+	log.Println(" Сервер запущен на http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
