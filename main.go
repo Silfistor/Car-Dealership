@@ -25,12 +25,12 @@ func initDB() {
 	var err error
 	db, err = sql.Open("postgres", "host=localhost user=autosalon_user password=secure_password dbname=autosalon sslmode=disable")
 	if err != nil {
-		log.Fatal("❌ Не удалось открыть подключение к БД:", err)
+		log.Fatal(" Не удалось открыть подключение к БД:", err)
 	}
 	if err = db.Ping(); err != nil {
-		log.Fatal("❌ Не удалось подключиться к PostgreSQL:", err)
+		log.Fatal(" Не удалось подключиться к PostgreSQL:", err)
 	}
-	log.Println("✅ Успешное подключение к PostgreSQL")
+	log.Println(" Успешное подключение к PostgreSQL")
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
